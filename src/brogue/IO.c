@@ -2386,11 +2386,23 @@ void executeKeystroke(signed long keystroke, boolean controlKey, boolean shiftKe
 		case LEFT_ARROW:
 		case NUMPAD_4:
 			direction = LEFT;
+			if(shiftKey) {
+				direction = UPLEFT;
+			}
+			if(controlKey) {
+				direction = DOWNLEFT;
+			}
 			break;
 		case RIGHT_KEY:
 		case RIGHT_ARROW:
 		case NUMPAD_6:
 			direction = RIGHT;
+			if(shiftKey) {
+				direction = UPRIGHT;
+			}
+			if(controlKey) {
+				direction = DOWNRIGHT;
+			}
 			break;
 		case NUMPAD_7:
 		case UPLEFT_KEY:
@@ -2587,11 +2599,12 @@ void executeKeystroke(signed long keystroke, boolean controlKey, boolean shiftKe
 	if (direction >= 0) { // if it was a movement command
         hideCursor();
 		considerCautiousMode();
-		if (controlKey || shiftKey) {
-			playerRuns(direction);
-		} else {
-			playerMoves(direction);
-		}
+		/* if (controlKey || shiftKey) { */
+		/* 	playerRuns(direction); */
+		/* } else { */
+		/* 	playerMoves(direction); */
+		/* } */
+		playerMoves(direction);
 		refreshSideBar(-1, -1, false);
 	}
     

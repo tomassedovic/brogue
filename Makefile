@@ -45,7 +45,7 @@ BROGUEFILES=src/brogue/Architect.o \
 
 TCOD_DEF = -DBROGUE_TCOD -I$(LIBTCODDIR)/include
 TCOD_DEP = ${LIBTCODDIR}
-TCOD_LIB = -L. -L${LIBTCODDIR} ${SDL_FLAGS} -ltcod -Wl,-rpath,.
+TCOD_LIB = -lm -L. -L${LIBTCODDIR} ${SDL_FLAGS} -ltcod -Wl,-rpath,.
 
 CURSES_DEF = -DBROGUE_CURSES
 CURSES_LIB = -lncurses -lm
