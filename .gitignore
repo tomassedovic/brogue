@@ -1,0 +1,6 @@
+/brogue-*.tar.gz
+/libtcod.so
+/libtcodgui.so
+/libtcodxx.so
+/src/brogue/*.o
+/src/platform/*.o
