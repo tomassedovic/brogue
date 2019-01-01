@@ -106,6 +106,7 @@ tar : tcod
 	bin/brogue-icon.png \
 	$(wildcard bin/fonts/*.png) \
 	$(wildcard bin/*.so) \
+	$(wildcard bin/*.so.*) \
 	$(wildcard src/*.sh) \
 	$(wildcard src/brogue/*.c) \
 	$(wildcard src/brogue/*.h) \
