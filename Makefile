@@ -91,7 +91,7 @@ clean :
 ${LIBTCODDIR} :
 	src/get-libtcod.sh
 
-tar : both
+tar : tcod
 	rm -f ${RELEASENAME}.tar.gz
 	tar --transform 's,^,${RELEASENAME}/,' -czf ${RELEASENAME}.tar.gz \
 	Makefile \
